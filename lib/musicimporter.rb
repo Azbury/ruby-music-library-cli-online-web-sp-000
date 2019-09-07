@@ -6,6 +6,6 @@ class MusicImporter
   end
 
   def files
-    Dir.entries(self.path)
+    Dir.entries(self.path).delete_if {|e| e.size <= 2}
   end
 end
