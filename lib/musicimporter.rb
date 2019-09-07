@@ -4,4 +4,8 @@ class MusicImporter
   def initialize (filepath)
     @path = filepath
   end
+
+  def files
+    @path
+  end
 end
