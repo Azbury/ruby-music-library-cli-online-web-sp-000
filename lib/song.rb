@@ -9,6 +9,10 @@ class Song
     self.genre = genre if genre != nil
   end
 
+  def self.find_by_name(name)
+    self.all.detect{|s| s.name == name}
+  end
+
   def genre= (genre)
     @genre = genre
     genre.songs << self if !genre.songs.include?(self)
