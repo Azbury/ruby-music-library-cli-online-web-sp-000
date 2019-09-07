@@ -10,7 +10,7 @@ class Song
   end
 
   def self.new_from_filename (filename)
-    filename_array.split(" - ")
+    filename_array = filename.split(" - ")
     Song.new(filename_array[1], filename_array[0], filename_array[2])
   end
   def self.find_by_name(name)
