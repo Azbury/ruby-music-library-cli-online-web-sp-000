@@ -13,6 +13,14 @@ class Song
     self.all.detect{|s| s.name == name}
   end
 
+  def self.find_or_create_by_name (name)
+    if self.find_by_name(name) == false
+      self.create(name)
+    else
+      self.find_by_name(name)
+    end
+  end
+
   def genre= (genre)
     @genre = genre
     genre.songs << self if !genre.songs.include?(self)
