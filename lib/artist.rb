@@ -4,7 +4,7 @@ class Artist
 
   @@all = []
 
-  extend Concerns::Findable
+  extend Concerns
 
   def initialize (name)
     @name = name
