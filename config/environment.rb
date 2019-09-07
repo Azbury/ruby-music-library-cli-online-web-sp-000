@@ -5,4 +5,4 @@ module Concerns
 end
 
 require_all 'lib'
-require 'lib/concerns'
+require 'lib/concerns/findable.rb'
