@@ -6,6 +6,6 @@ class MusicImporter
   end
 
   def files
-    @path
+    puts @path
   end
 end
