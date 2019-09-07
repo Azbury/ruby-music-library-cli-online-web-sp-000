@@ -9,6 +9,10 @@ class Song
     self.genre = genre if genre != nil
   end
 
+  def self.new_from_filename (filename)
+    filename_array.split(" - ")
+    Song.new(filename_array[1], filename_array[0], filename_array[2]) 
+  end
   def self.find_by_name(name)
     self.all.detect{|s| s.name == name}
   end
