@@ -9,6 +9,14 @@ class Artist
     @songs = []
   end
 
+  def genres
+    genre_array = []
+    self.songs.each do |song|
+      genre_array << song.genre if !genre_array.include?(song.genre)
+    end
+    genre_array
+  end
+
   def add_song (song)
     song.artist = self if song.artist == nil
     self.songs << song if !self.songs.include?(song)
