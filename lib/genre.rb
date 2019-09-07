@@ -7,7 +7,15 @@ class Genre
     @name = name
     @songs = []
   end
-
+  
+  def artists
+    artists_array = []
+    self.songs.each do |song|
+      artists_array << song.artist if !artists_array.include?(song.artist)
+    end
+    artists_array
+  end
+  
   def self.all
     @@all
   end
