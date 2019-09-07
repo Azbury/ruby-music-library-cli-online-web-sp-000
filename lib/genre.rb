@@ -7,7 +7,7 @@ class Genre
     @name = name
     @songs = []
   end
-  
+
   def artists
     artists_array = []
     self.songs.each do |song|
@@ -15,7 +15,7 @@ class Genre
     end
     artists_array
   end
-  
+
   def self.all
     @@all
   end
