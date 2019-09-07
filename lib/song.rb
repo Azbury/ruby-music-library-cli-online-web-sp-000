@@ -11,6 +11,10 @@ class Song
     @@all
   end
 
+  def artist
+    self.artist
+  end
+  
   def self.destroy_all
     @@all.clear
   end
